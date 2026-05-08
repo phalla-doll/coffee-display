@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar";
 import { Carousel } from "@/components/carousel";
 
 export default function Home() {
@@ -8,9 +7,7 @@ export default function Home() {
       <div className="absolute top-[-20%] right-[10%] w-[800px] h-[800px] bg-[var(--color-starbucks-light)] rounded-full -z-10 blur-3xl opacity-60"></div>
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--color-starbucks-light)] rounded-full -z-10 mix-blend-multiply"></div>
 
-      <Navbar />
-
-      <div className="flex-1 w-full px-16 relative z-10 flex flex-col pt-4 mx-auto max-w-[1440px]">
+      <div className="flex-1 w-full px-16 relative z-10 flex flex-col pt-16 mx-auto max-w-[1440px]">
         {/* Header Section */}
         <div className="w-full flex justify-end pr-8 relative z-20">
           <div className="max-w-[700px] text-right">
