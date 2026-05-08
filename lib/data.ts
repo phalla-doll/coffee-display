@@ -56,7 +56,7 @@ export const drinks: Drink[] = [
     totalFat: "20g (30%)",
     saturatedFat: "12g (60%)",
     transFat: "0.5g",
-    image: "https://images.unsplash.com/photo-1553787762-b5f52896da34?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1553177595-4de2bb0842b9?w=800&q=80",
     accent: "#D62828", // red
     bg: "#FADADD"
   }
