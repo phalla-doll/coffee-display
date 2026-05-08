@@ -1,21 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown, Play, Pause } from "lucide-react";
 import Image from "next/image";
 import { drinks } from "@/lib/data";
 
 export function Carousel() {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-  const next = () => {
+  const next = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % drinks.length);
-  };
+  }, []);
 
-  const prev = () => {
+  const prev = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + drinks.length) % drinks.length);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      next();
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isPlaying, next]);
 
   return (
     <div className="relative w-full h-[650px] flex items-center justify-center pt-8">
@@ -141,6 +152,26 @@ export function Carousel() {
           </motion.div>
         );
       })}
+
+      {/* Auto-play Controls */}
+      <div className="absolute bottom-4 right-1/2 translate-x-1/2 flex items-center gap-2 bg-white/70 backdrop-blur-md px-4 py-2 rounded-full shadow-sm z-40 text-[#006241]">
+        <button 
+          onClick={() => setIsPlaying(!isPlaying)} 
+          className="flex items-center gap-2 hover:opacity-70 transition-opacity"
+        >
+          {isPlaying ? (
+            <>
+               <Pause size={14} fill="currentColor" />
+               <span className="text-[10px] font-bold uppercase tracking-widest">Pause</span>
+            </>
+          ) : (
+             <>
+               <Play size={14} fill="currentColor" />
+               <span className="text-[10px] font-bold uppercase tracking-widest">Resume</span>
+             </>
+          )}
+        </button>
+      </div>
     </div>
   );
 }
