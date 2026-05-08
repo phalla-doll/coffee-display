@@ -1,0 +1,20 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&f[]=clash-display@200,400,700,500,600,300&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Satoshi', sans-serif;
+  --font-display: 'Clash Display', sans-serif;
+  --color-starbucks-green: #006241;
+  --color-starbucks-light: #EDF3ED;
+  --color-card-bg: #F2F1EC;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: white;
+  color: #1E3932;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
