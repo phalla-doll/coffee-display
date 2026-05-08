@@ -10,11 +10,11 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="flex-1 w-full px-16 relative z-10 flex flex-col justify-between pt-8 pb-12 mx-auto max-w-[1440px]">
+      <div className="flex-1 w-full px-16 relative z-10 flex flex-col pt-4 mx-auto max-w-[1440px]">
         {/* Header Section */}
-        <div className="w-full flex justify-end pr-8 relative z-20 mt-10">
+        <div className="w-full flex justify-end pr-8 relative z-20">
           <div className="max-w-[700px] text-right">
-            <h1 className="text-6xl md:text-8xl font-display font-bold text-[var(--color-starbucks-green)] leading-[0.85] tracking-tight mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-[var(--color-starbucks-green)] leading-[0.85] tracking-tight mb-6">
               The happiest hour<br/>of the year
             </h1>
             <p className="text-xl text-gray-500 font-medium tracking-wide">
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         {/* Carousel Section */}
-        <div className="absolute left-0 bottom-4 w-full flex justify-center z-10">
+        <div className="flex-1 flex max-h-[700px] w-full justify-center items-end mt-[-20px] pb-4 z-10">
            <Carousel />
         </div>
       </div>

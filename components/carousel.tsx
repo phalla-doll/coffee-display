@@ -18,7 +18,7 @@ export function Carousel() {
   };
 
   return (
-    <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden pt-10">
+    <div className="relative w-full h-[650px] flex items-center justify-center pt-8">
       {drinks.map((drink, i) => {
         const isActive = i === activeIndex;
         let delta = i - activeIndex;
