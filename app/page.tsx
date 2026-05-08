@@ -13,20 +13,21 @@ export default function Home() {
 
         <Navbar />
 
-        <div className="flex-1 w-full px-12 relative z-10 flex flex-col items-end pt-10">
-          <div className="max-w-2xl text-right mr-12 relative z-20">
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-[var(--color-starbucks-green)] leading-[0.9] tracking-tight">
-              The happiest hour<br/>of the year
-            </h1>
-            <p className="mt-6 text-sm text-gray-500 max-w-md ml-auto">
-              Sign up to get exclusive access to deals on drinks this holiday season.
-            </p>
-            <a href="#" className="inline-block mt-4 text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-400 hover:text-[var(--color-starbucks-green)] hover:border-[var(--color-starbucks-green)] transition-colors pb-1">
-              Send me magic
-            </a>
+        <div className="flex-1 w-full px-16 relative z-10 flex flex-col justify-between pt-8 pb-12">
+          {/* Header Section */}
+          <div className="w-full flex justify-end pr-8 relative z-20">
+            <div className="max-w-[600px] text-right">
+              <h1 className="text-6xl md:text-8xl font-display font-bold text-[var(--color-starbucks-green)] leading-[0.85] tracking-tight mb-6">
+                The happiest hour<br/>of the year
+              </h1>
+              <p className="text-lg text-gray-500 font-medium tracking-wide">
+                Available now at the counter.
+              </p>
+            </div>
           </div>
 
-          <div className="absolute left-0 bottom-10 w-full flex justify-center pb-12 z-10">
+          {/* Carousel Section */}
+          <div className="absolute left-0 bottom-[-20px] w-full flex justify-center z-10">
              <Carousel />
           </div>
         </div>

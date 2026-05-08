@@ -88,34 +88,25 @@ export function Carousel() {
                   {drink.type}
                 </h3>
 
-                {/* Nutritional Info (Inactive state) OR Selectors (Active state) */}
+                {/* Nutritional Info (Inactive state) OR Highlights (Active state) */}
                 <div className="w-full mt-auto">
                   {isActive ? (
-                    <div className="flex flex-col space-y-4 w-full">
-                      <div className="flex items-center justify-between border-b border-white/20 pb-2">
-                        <span className="text-sm font-sans font-medium uppercase tracking-widest opacity-80">Size</span>
-                        <div className="flex items-center gap-1 cursor-pointer">
-                          <span className="text-sm font-medium">Select a size</span>
-                          <ChevronDown size={16} />
-                        </div>
+                    <div className="flex flex-col space-y-5 w-full pt-4">
+                      <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                        <span className="text-sm font-sans font-medium uppercase tracking-widest opacity-80">Serving</span>
+                        <span className="text-sm font-bold tracking-wide">Grande (16 fl oz)</span>
                       </div>
-                      <div className="flex items-center justify-between border-b border-white/20 pb-2">
-                        <span className="text-sm font-sans font-medium uppercase tracking-widest opacity-80">Milk</span>
-                        <div className="flex items-center gap-1 cursor-pointer">
-                          <span className="text-sm font-medium">Select a milk type</span>
-                          <ChevronDown size={16} />
-                        </div>
+                      <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                        <span className="text-sm font-sans font-medium uppercase tracking-widest opacity-80">Calories</span>
+                        <span className="text-sm font-bold tracking-wide">{drink.calories}</span>
                       </div>
-                      <div className="flex items-center justify-between border-b border-white/20 pb-2">
-                        <span className="text-sm font-sans font-medium uppercase tracking-widest opacity-80">Drink</span>
-                        <div className="flex items-center gap-1 cursor-pointer">
-                          <span className="text-sm font-medium">Drink type</span>
-                          <ChevronDown size={16} />
-                        </div>
+                      <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                        <span className="text-sm font-sans font-medium uppercase tracking-widest opacity-80">Caffeine</span>
+                        <span className="text-sm font-bold tracking-wide">75mg</span>
                       </div>
-                      <button className="w-full mt-6 bg-white text-[#006241] py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-gray-100 transition shadow-lg">
-                        Add to basket
-                      </button>
+                      <div className="w-full mt-6 bg-white text-[#006241] py-4 rounded-full font-bold uppercase tracking-widest text-sm shadow-xl text-center">
+                        Order Now
+                      </div>
                     </div>
                   ) : (
                     <div className="text-left w-full">
