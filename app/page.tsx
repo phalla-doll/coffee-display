@@ -4,8 +4,7 @@ export default function Home() {
   return (
     <main className="w-screen h-screen bg-white relative overflow-hidden flex flex-col">
       {/* Background Decorative Graphic (Light Mint Circle) */}
-      <div className="absolute top-[-20%] right-[10%] w-[800px] h-[800px] bg-[var(--color-starbucks-light)] rounded-full -z-10 blur-3xl opacity-60"></div>
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--color-starbucks-light)] rounded-full -z-10 mix-blend-multiply"></div>
+      <div className="absolute top-[-20%] left-[20%] w-[900px] h-[900px] bg-[var(--color-starbucks-light)] rounded-full -z-10"></div>
 
       <div className="flex-1 w-full px-16 relative z-10 flex flex-col pt-16 mx-auto max-w-[1440px]">
         {/* Header Section */}

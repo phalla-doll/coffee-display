@@ -46,6 +46,17 @@ export function Carousel() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className={`absolute flex flex-col rounded-[2.5rem] p-8 min-h-[500px] w-[380px] shadow-xl origin-center`}
           >
+             {/* Background Pattern for active card */}
+             {isActive && (
+               <div
+                 className="absolute inset-0 z-0 opacity-10 pointer-events-none rounded-[2.5rem]"
+                 style={{
+                   backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5l6.5 14.5 15.5 2.5-11 11 2.5 15.5-13.5-7.5-13.5 7.5 2.5-15.5-11-11 15.5-2.5z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+                   backgroundSize: '60px 60px',
+                 }}
+               />
+             )}
+
              {/* Drink Image */}
              {/* We use a white background circle for the image to handle non-transparent Unsplash photos */}
              <div className="relative w-full h-48 md:h-64 flex justify-center items-center mt-[-60px] z-20">
@@ -79,7 +90,7 @@ export function Carousel() {
              {/* Content */}
              <motion.div 
                animate={{ y: isActive ? 0 : 20 }}
-               className="mt-6 flex flex-col items-center text-center px-2 flex-grow"
+               className="relative z-10 mt-6 flex flex-col items-center text-center px-2 flex-grow"
              >
                 <h2 className={`font-display font-medium leading-tight ${isActive ? 'text-3xl' : 'text-2xl'} mb-1`}>
                   {drink.name}
