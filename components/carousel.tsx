@@ -154,7 +154,7 @@ export function Carousel() {
       })}
 
       {/* Auto-play Controls */}
-      <div className="absolute bottom-4 right-1/2 translate-x-1/2 flex items-center gap-2 bg-white/70 backdrop-blur-md px-4 py-2 rounded-full shadow-sm z-40 text-[#006241]">
+      <div className="absolute bottom-8 right-8 md:right-16 flex items-center gap-2 bg-white/70 backdrop-blur-md px-4 py-2 rounded-full shadow-sm z-40 text-[#006241]">
         <button 
           onClick={() => setIsPlaying(!isPlaying)} 
           className="flex items-center gap-2 hover:opacity-70 transition-opacity"
