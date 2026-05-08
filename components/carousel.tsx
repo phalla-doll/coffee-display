@@ -36,7 +36,7 @@ export function Carousel() {
             key={drink.id}
             initial={false}
             animate={{
-              x: delta * 340,
+              x: delta * 400,
               scale: isActive ? 1 : 0.85,
               opacity: isActive ? 1 : 0.6,
               zIndex: isActive ? 30 : 10,
@@ -44,7 +44,7 @@ export function Carousel() {
               color: isActive ? "#FFFFFF" : "#1E3932",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className={`absolute flex flex-col rounded-[2.5rem] p-8 min-h-[500px] w-[320px] shadow-xl origin-center`}
+            className={`absolute flex flex-col rounded-[2.5rem] p-8 min-h-[500px] w-[380px] shadow-xl origin-center`}
           >
              {/* Drink Image */}
              {/* We use a white background circle for the image to handle non-transparent Unsplash photos */}
